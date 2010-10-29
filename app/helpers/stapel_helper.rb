@@ -1,0 +1,2 @@
+module StapelHelper
+end

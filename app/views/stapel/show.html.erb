@@ -1,0 +1,17 @@
+<style css>
+.frame{position:absolute;z-index:100;background-color:white;border-left:1px;border-right:1px;border-top:0px;border-bottom:0px;border-color:black;border-style:solid;width:60%;height:50%;top:50px;left:50px;}
+.stapel{position:absolute;z-index:20;border-left:1px;border-right:1px;border-top:1px;border-bottom:1px;border-color:black;border-style:solid;font-family:verdana;font-size:10px;text-align:center;bottom:0px;width:4%}
+.month {position:absolute;z-index:20;border:0px;border-color:black;border-style:solid;font-family:verdana;font-size:10px;text-align:center;background-color:white;bottom:-25px;width:5%;height:20px}
+ .left {position:absolute;z-index:-100px;border-top:0px;border-left:0px;padding:0px;border-right:0px;border-bottom:1px;border-color:black;border-style:solid;font-family:verdana;font-size:10px;text-align:left;background-color:none;left:-30px;width:530px;height:20px}
+</style>
+<div class=frame>
+
+<div class=stapel title="Jan: 224" style=background-color:<%= @bar_color %>;left:20%;height:80%>720</div>
+<div class=month style=left:20%;>Jan</div>
+
+<div class=stapel title="Feb: 54" style=background-color:<%= @bar_color %>;left:25%;height:54px>54</div>
+<div class=month style=left:25%;>Feb</div>
+
+<div class=left style=bottom:0>0</div>
+<div class=left style=bottom:1000>1000</div>
+</div>
