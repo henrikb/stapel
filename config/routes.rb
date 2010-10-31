@@ -1,4 +1,6 @@
 Stapel::Application.routes.draw do
+  resources :bars
+
   get "stapel/show"
 
   get "stapel/update"
