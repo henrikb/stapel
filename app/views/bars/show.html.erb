@@ -1,0 +1,92 @@
+<style css>
+.top {
+  position:absolute;
+  left:0;
+  top:0;
+  text-align:center;
+  width:100%;
+  height:5%;
+}
+
+.frame {
+  position:absolute;
+  left:35%;
+  top:10%;
+  background-color:white;
+  border-left:1px;
+  border-right:0px;
+  border-top:0px;
+  border-bottom:0px;
+  border-color:black;
+  border-style:solid;
+  width:30%;
+  height:70%;
+}
+
+.stapel {
+  position:absolute;
+  z-index:20;
+  border-left:1px;
+  border-right:1px;
+  border-top:1px;
+  border-bottom:1px;
+  border-color:black;
+  border-style:solid;
+  font-family:verdana;
+  font-size:10px;
+  text-align:center;
+  background-color:rgb(200,0,255);
+  left:35%;
+  bottom:0px;
+  width:30%
+}
+
+.left {
+  position:absolute;
+  z-index:20;
+  border-top:0px;
+  border-left:0px;
+  padding:0px;
+  border-right:0px;
+  border-bottom:1px;
+  border-color:black;
+  border-style:solid;
+  font-family:verdana;
+  font-size:10px;
+  text-align:left;
+  background-color:none;
+  left:-15%;
+  width:100%;
+  height:20px
+}
+
+.bottom {
+  position:absolute;
+  left:25%;
+  top:80%;
+  width:50%;
+  text-align:left;
+}
+</style>
+
+<div class=top>
+<p id="notice"><%= notice %></p>
+<h1><%= @bar.name %></h1>
+</div>
+
+<div class=frame>
+
+<div class=stapel title="<%= @bar.value %>" style=height:<%= percent(@bar.value,@bar.limit) %>% ><%= @bar.value %></div>
+
+<div class=left style=bottom:0>0</div>
+<div class=left style=bottom:1000><%= @bar.limit %></div>
+</div>
+
+<div class=bottom>
+<p>
+  <%= @bar.description %>
+</p>
+
+<%= link_to 'Edit', edit_bar_path(@bar) %> |
+<%= link_to 'Back', bars_path %>
+</div>
